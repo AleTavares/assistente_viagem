@@ -8,8 +8,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "353818015911-remotestate"
-    key    = "prj-glueColeraAPI/terraform.tfstate"
+    bucket = "Bucket com o State"
+    key    = "prj-assistente-viagem/terraform.tfstate"
     region = "us-east-1"
   }
 }

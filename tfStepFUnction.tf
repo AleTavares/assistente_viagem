@@ -1,4 +1,3 @@
-# AWS Step Functions IAM roles and Policies
 resource "aws_iam_role" "aws_stf_role" {
   name               = "aws-stf-role"
   assume_role_policy = <<EOF
@@ -42,7 +41,6 @@ resource "aws_iam_role_policy" "step_function_policy" {
 EOF
 }
 
-# AWS Step function definition
 resource "aws_sfn_state_machine" "aws_step_function_workflow" {
   name       = "assistente-viagem"
   role_arn   = aws_iam_role.aws_stf_role.arn
